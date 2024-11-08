@@ -24,6 +24,19 @@ public:
     int get_mount_state();
 };
 
+class voltageBlocker //krążek
+{
+private:
+    uint8_t m_voltage_read_pin;
+public:
+    voltageBlocker(uint8_t voltage_read_pin);
+    void init();
+    int check_is_circuit_open();
+};
+
+
+
+
 
 
 

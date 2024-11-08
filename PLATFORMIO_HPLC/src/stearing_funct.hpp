@@ -1,5 +1,14 @@
+#include "defined_const.hpp"
+
+#include"dzielnik_napięcia.hpp"
+#include"czujnik_hala.hpp"
+#include"czujnik_odleglosci.hpp"
+#include"czujnik_rgb.hpp"
+
+
 #ifndef STEARING_FUNCT
 #define STEARING_FUNCT
+
 
 enum state //to uppercase but I am not im mood to do that
 {
@@ -29,6 +38,11 @@ enum state //to uppercase but I am not im mood to do that
     autosampler_probe_5 = 18,
     autosampler_probe_6 = 19,
 };
+
+void tube_state_funct(hallSensor& hall_sensor1);
+
+
+
 
 
 

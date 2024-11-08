@@ -57,3 +57,18 @@ int voltageDivider::get_mount_state()
 {
     return m_mount_state;
 }
+
+
+voltageBlocker::voltageBlocker(uint8_t voltage_read_pin):
+m_voltage_read_pin(voltage_read_pin)
+{
+}
+
+void voltageBlocker::init()
+{
+    pinMode(m_voltage_read_pin,INPUT);
+}
+int voltageBlocker::check_is_circuit_open()
+{
+    return analogRead(m_voltage_read_pin);
+}

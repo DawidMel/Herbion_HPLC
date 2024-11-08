@@ -1,5 +1,10 @@
+#include "defined_const.hpp"
+#include<Arduino.h>
+
+
 #ifndef DZIELNIK_NAPIECIA
 #define DZIELNIK_NAPIECIA
+
 
 class voltageDivider //pieprzyć optymalizację bawię się z floatami
 {
@@ -23,6 +28,18 @@ public:
     void check_is_column_mount();
     int get_mount_state();
 };
+
+class diodeVoltageDevider : public voltageDivider
+{
+private:
+    /* data */
+public:
+    diodeVoltageDevider(/* args */);
+    ~diodeVoltageDevider();
+};
+
+
+
 
 class voltageBlocker //krążek
 {

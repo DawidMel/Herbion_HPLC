@@ -4,6 +4,7 @@
 #define CZUJNIK_HALA
 
 
+
 class hallSensor
 {
 private:

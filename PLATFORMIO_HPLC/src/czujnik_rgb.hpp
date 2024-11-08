@@ -3,10 +3,11 @@
 #ifndef CZUJNIK_RGB
 #define CZUJNIK_RGB
 
+
 //global variable
 
-volatile int RGB_counter = 0;
-volatile uint8_t rgb_measure_lock = 1;
+volatile extern int RGB_counter;
+volatile extern uint8_t rgb_measure_lock;
 
 
 

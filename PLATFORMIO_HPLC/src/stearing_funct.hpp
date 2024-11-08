@@ -1,14 +1,24 @@
-#include "defined_const.hpp"
 
-#include"dzielnik_napięcia.hpp"
 #include"czujnik_hala.hpp"
-#include"czujnik_odleglosci.hpp"
-#include"czujnik_rgb.hpp"
-
+#include "defined_const.hpp"
 
 #ifndef STEARING_FUNCT
 #define STEARING_FUNCT
 
+
+
+enum exercise_type
+{
+    tube = 0,
+    filter = 1,
+    column = 2,
+    uv_lamp = 3,
+    bottle = 4,
+    sample_probe_care = 5,
+    try_different_sample =6,
+
+    not_selected_exercise = 99
+};
 
 enum state //to uppercase but I am not im mood to do that
 {
@@ -37,11 +47,13 @@ enum state //to uppercase but I am not im mood to do that
     autosampler_probe_4 = 17,
     autosampler_probe_5 = 18,
     autosampler_probe_6 = 19,
+
+    not_selected_state = 99
 };
 
 void tube_state_funct(hallSensor& hall_sensor1);
 
-
+void bottle_state_funct();
 
 
 

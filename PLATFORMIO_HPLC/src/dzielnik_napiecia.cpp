@@ -1,6 +1,5 @@
-#include"dzielnik_napięcia.hpp"
-#include "defined_const.hpp"
-#include<Arduino.h>
+#include "dzielnik_napiecia.hpp"
+
 
 voltageDivider::voltageDivider(const uint8_t voltage_read_pin, const float refernce_resistor,
                                 const float build_in_resistor,const float voltage_tolerance):

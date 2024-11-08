@@ -1,4 +1,4 @@
-#include"czujnik_rgb.hpp"
+
 
 /*
 TCS3200D has different sensitivities to red, green, and blue. As a result, the RGB output of pure white is not always 255.
@@ -105,7 +105,18 @@ void loop()                    //główna pętla programu
  
 }
 
+
+
 */
+
+#include"czujnik_rgb.hpp"
+
+
+volatile int RGB_counter=0;
+volatile uint8_t rgb_measure_lock=1;
+
+
+
 void timer2_start(void)  
 //licznik zliczający od 100 (wartość TCNT2) do 255 (maxymalna wartość dla licznika)
 //zwiększenie wartości licznika z częśtotliwością ok 15,6 KHZ (zegar 16MHZ prescaler 1024)

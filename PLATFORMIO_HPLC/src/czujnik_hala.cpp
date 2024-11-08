@@ -24,4 +24,24 @@ void loop () {
 }
 
 
+
 */
+    hallSensor::hallSensor(uint8_t output_pin):
+    m_output_pin(output_pin)
+    {
+    }
+
+    void hallSensor::init()
+    {
+    pinMode(m_output_pin, INPUT);
+    }
+
+
+    void hallSensor::make_measure() //TODO check for improve measure formula (but probably dont need)
+    {
+        m_rav_meas = analogRead(m_output_pin);
+    }
+    int hallSensor::get_value()
+    {
+        return m_rav_meas;
+    }

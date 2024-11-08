@@ -1,0 +1,4 @@
+#ifndef CZUJNIK_HALA
+#define CZUJNIK_HALA
+
+#endif //CZUJNIK_HALA

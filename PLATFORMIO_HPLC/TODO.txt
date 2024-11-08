@@ -1,1 +1,2 @@
 próbowałem pisać w polskim ale ni w ząb mi to nie podpasowało wracam do angielskiego a nazwy poprawię w refaktorze
+Ustawić wszystkie piny jako const w klasach (teraz mi się nie chcę z tym bawić)

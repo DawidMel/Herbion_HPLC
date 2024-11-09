@@ -14,6 +14,11 @@ constexpr int HAL_MIN_VALUE_FOR_BLOCKED = 51;
 constexpr int HAL_MAX_VALUE_FOR_BLOCKED = 599;
 constexpr int HAL_MIN_VALUE_FOR_GOOD = 600;
 
+//distace sensor
+
+constexpr uint8_t PIN_DIGITAL_DISTANCE_SENSOR = 10;
+constexpr uint8_t PIN_ANALOG_DISTANCE_SENSOR = A4;
+
 //rgb sensor
 constexpr uint8_t PIN_RGB_SENSOR_OUT = 3;  // MUST SUPPORT INTERUPT!
 

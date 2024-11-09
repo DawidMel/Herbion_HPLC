@@ -1,6 +1,8 @@
 
 #include"czujnik_hala.hpp"
+#include "czujnik_odleglosci.hpp"
 #include "defined_const.hpp"
+#include "dzielnik_napiecia.hpp"
 
 #ifndef STEARING_FUNCT
 #define STEARING_FUNCT
@@ -48,13 +50,15 @@ enum state //to uppercase but I am not im mood to do that
     autosampler_probe_5 = 18,
     autosampler_probe_6 = 19,
 
-    not_selected_state = 99
+    not_selected_state = 99,
+    error_state = 100
 };
 
 void tube_state_funct(hallSensor& hall_sensor1);
 
-void bottle_state_funct();
+void bottle_state_funct(distanceSensor& dist_sensor);
 
+void column_state_funct(voltageDivider& right_column, voltageDivider & wrong_column);
 
 
 

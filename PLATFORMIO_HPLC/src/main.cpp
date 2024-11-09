@@ -21,8 +21,8 @@ distanceSensor dist_sensot(PIN_DIGITAL_DISTANCE_SENSOR,PIN_ANALOG_DISTANCE_SENSO
 rgbSensor rgb_sensor(PIN_RGB_SENSOR_S0,PIN_RGB_SENSOR_S1,PIN_RGB_SENSOR_S2,PIN_RGB_SENSOR_S3,PIN_RGB_SENSOR_LED,PIN_RGB_SENSOR_OUT);
 
 
-voltageDivider wrong_column(COLUMN_PIN, COLUMN_REFFERENCE_RESISTOR, COLUMN_1_BUILD_IN_RESISTOR, COLUMN_1_VOLTAGE_TOLERANCE);
-voltageDivider right_column(COLUMN_PIN, COLUMN_REFFERENCE_RESISTOR, COLUMN_2_BUILD_IN_RESISTOR, COLUMN_2_VOLTAGE_TOLERANCE);
+voltageDivider wrong_column1(COLUMN_PIN, COLUMN_REFFERENCE_RESISTOR, COLUMN_1_BUILD_IN_RESISTOR, COLUMN_1_VOLTAGE_TOLERANCE);
+voltageDivider right_column1(COLUMN_PIN, COLUMN_REFFERENCE_RESISTOR, COLUMN_2_BUILD_IN_RESISTOR, COLUMN_2_VOLTAGE_TOLERANCE);
 
 voltageBlocker filter1(FILTER_PIN);
 
@@ -35,8 +35,8 @@ hall_sensor1.init();
 dist_sensot.init();
 rgb_sensor.init();
 
-wrong_column.init();
-wrong_column.init();
+wrong_column1.init();
+wrong_column1.init();
 
 }
 
@@ -60,7 +60,7 @@ case exercise_type::bottle:
     break;
 
 case exercise_type::column:
-    column_state_funct(right_column, wrong_column);
+    column_state_funct(right_column1, wrong_column1);
     break;
 
 case exercise_type::filter:
